@@ -1,0 +1,62 @@
+<div class="row">
+
+  <div class="col-lg-8">
+    <% @articles.each do |article| %>
+        <div class="panel panel-default">
+          <div class="panel-heading background-white post-header">
+            <h2 class="post-title"><%= link_to article.title.truncate(80), article %></h2>
+
+            <div class="post-details">
+              <%= article.created_at.to_date %> By
+              <%= article.created_by %>
+            </div>
+
+          </div>
+          <div class="panel-body post-content">
+            <p><%= article.content.truncate(400) %></p>
+          </div>
+          <div class="footer-social">
+            <div class="post-share">
+              <a class="color-transition" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a class="color-transition" href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a class="color-transition" href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+              <a class="color-transition" href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+            </div>
+            <div class="post-comment">
+              <a class="color-transition" href="#" onclick=""><i class="fa fa-comments-o"></i>
+                3 Comments
+              </a>
+            </div>
+            <div class="post-read-more pull-right">
+              <%= link_to article, class: 'color-transition' do %>
+                  <i class="fa fa-angle-double-right"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="panel panel-default">
+      <div class="panel-heading background-white sidebar">
+        <h2>Popular Post</h2>
+      </div>
+      <div class="panel-body popular-post">
+        <ul class="list-unstyled">
+          <% @articles.each do |article| %>
+              <li>
+                <%= link_to article.title.truncate(50), article, class: 'title' %>
+                <p class="short-desc"><%= article.content.truncate(200) %></p>
+              </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<br>
+
+<%= link_to 'New Article', new_article_path, class: 'btn btn-primary btn-xs' %>

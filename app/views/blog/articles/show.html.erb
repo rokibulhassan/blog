@@ -1,0 +1,32 @@
+<div class="row">
+
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading background-white post-header">
+        <h2 class="post-title"><%= link_to @article.title, @article %></h2>
+
+        <div class="post-details">
+          <%= @article.created_at.to_date %> By
+          <%= @article.created_by %>
+        </div>
+
+      </div>
+      <div class="panel-body post-content">
+        <p><%= @article.content %></p>
+      </div>
+      <div class="footer-social">
+        <div class="post-share">
+          <a class="color-transition" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a class="color-transition" href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a class="color-transition" href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+          <a class="color-transition" href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+        </div>
+        <div class="post-comment">
+          <a class="color-transition" href="#" onclick=""><i class="fa fa-comments-o"></i>
+            3 Comments
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

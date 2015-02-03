@@ -1,0 +1,10 @@
+<%= simple_form_for(@article, wrapper: :horizontal_form) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :title %>
+      <%= f.input :content %>
+      <%#= f.input :enable, wrapper: :horizontal_radio_and_checkboxes %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Save" %>
+    </div>
+<% end %>
