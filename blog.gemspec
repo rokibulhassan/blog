@@ -21,5 +21,4 @@ Gem::Specification.new do |s|
   s.add_dependency "devise", "~> 3.4.1"
   s.add_dependency "simple_form", "~> 3.1.0"
   s.add_dependency "twitter-bootstrap-rails", "~> 3.2.0"
-
 end
