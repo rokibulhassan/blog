@@ -1,9 +1,10 @@
 module Blog
   class Article < ActiveRecord::Base
+    belongs_to :author, class_name: User
+    has_many :comments
 
-    def created_by
-      user = User.where(id: self.author_id).first
-      user.try(:name) || "Anonymous"
+    def author_name
+      self.author.try(:name) || "Anonymous"
     end
   end
 end

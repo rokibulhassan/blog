@@ -11,6 +11,8 @@ module Blog
 
     # GET /articles/1
     def show
+      @comment = Comment.new
+      @comments = @article.comments
     end
 
     # GET /articles/new

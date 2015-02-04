@@ -1,29 +1,10 @@
-<%= form_for(@comment) do |f| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-      <% @comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= simple_form_for(@comment) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :content, label: false %>
+      <%= f.hidden_field :article_id, value: @article.id %>
+      <%= f.hidden_field :author_id, value: current_user.try(:id) %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :article_id %><br>
-    <%= f.number_field :article_id %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="field">
-    <%= f.label :author_id %><br>
-    <%= f.number_field :author_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Post Comments" %>
+    </div>
 <% end %>
