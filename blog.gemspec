@@ -5,7 +5,7 @@ require "blog/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "blog"
+  s.name        = "blogging"
   s.version     = Blog::VERSION
   s.authors     = ["Rokibul Hasan"]
   s.email       = ["rakib063049@gmail.com"]
