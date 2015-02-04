@@ -32,3 +32,5 @@ rails generate blog:install
 You can browse the blog with following url on your localhost
 
 http://localhost:3000/blog/articles
+
+**Demo** https://cryptic-reef-5835.herokuapp.com/blog/articles
