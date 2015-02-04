@@ -2,10 +2,10 @@
   <div class="col-lg-8">
     <% @articles.each do |article| %>
         <div class="panel panel-default">
-          <div class="panel-heading background-white post-header">
-            <h2 class="post-title"><%= link_to article.title.truncate(80), article %></h2>
+          <div class="panel-heading background-white">
+            <h2><%= link_to article.title.truncate(80), article %></h2>
 
-            <div class="post-details">
+            <div class="post-info">
               <%= article.created_at.to_date %> By
               <%= article.author_name %>
             </div>
@@ -16,18 +16,16 @@
           </div>
           <div class="footer-social">
             <div class="post-share">
-              <a class="color-transition" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a class="color-transition" href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a class="color-transition" href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
-              <a class="color-transition" href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
             </div>
             <div class="post-comment">
-              <a class="color-transition" href="#" onclick=""><i class="fa fa-comments-o"></i>
-                <%= article.comments.count %> Comments
-              </a>
+              <i class="fa fa-comments-o"></i> <%= article.comments.count %> Comments
             </div>
             <div class="post-read-more pull-right">
-              <%= link_to article, class: 'color-transition' do %>
+              <%= link_to article do %>
                   <i class="fa fa-angle-double-right"></i>
               <% end %>
             </div>
@@ -41,7 +39,7 @@
     <br>
 
     <div class="panel panel-default">
-      <div class="panel-heading background-white sidebar">
+      <div class="panel-heading background-white">
         <h2>Popular Post</h2>
       </div>
       <div class="panel-body popular-post">
@@ -56,6 +54,4 @@
       </div>
     </div>
   </div>
-
-
 </div>
