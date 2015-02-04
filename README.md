@@ -26,3 +26,9 @@ Run the generator:
 ```console
 rails generate blog:install
 ```
+
+## Usage
+
+You can browse the blog with following url on your localhost
+
+http://localhost:3000/blog/articles
