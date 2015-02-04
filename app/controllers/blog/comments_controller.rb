@@ -27,7 +27,7 @@ module Blog
       @comment = Comment.new(comment_params)
 
       if @comment.save
-        redirect_to @comment, notice: 'Comment was successfully created.'
+        redirect_to @comment.article, notice: 'Comment was successfully created.'
       else
         render :new
       end
