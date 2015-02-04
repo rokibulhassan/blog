@@ -13,3 +13,7 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+gem 'twitter-bootstrap-rails',
+    :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git',
+    :branch => "bootstrap3"
+
