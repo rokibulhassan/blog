@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>YourDoctors</title>
+  <title>Blog</title>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -28,10 +28,7 @@
 
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Doctors", main_app.doctors_path %></li>
-          <li><%= link_to "Hospitals", main_app.hospitals_path %></li>
-          <li><%= link_to "Patients", main_app.patients_path %></li>
-          <li><%= link_to "Heath Tips", articles_path %></li>
+          <li><%= link_to "Articles", articles_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right navbar-user">
           <% if current_user.present? %>
