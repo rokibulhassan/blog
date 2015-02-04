@@ -13,16 +13,3 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem "therubyracer"
-gem 'jquery-rails'
-gem 'less-rails'
-
-
-gem 'simple_form', '~> 3.1.0.rc1',
-    github: 'plataformatec/simple_form',
-    branch: 'master'
-
-gem 'twitter-bootstrap-rails',
-    :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git',
-    :branch => "bootstrap3"
-
